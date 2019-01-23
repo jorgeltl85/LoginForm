@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,11 +9,138 @@
         android:layout_width="@dimen/dimen_novalue"
         android:layout_height="match_parent"
         android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:layout_marginEnd="10dp"
+            android:hint="Introduce tu nombre"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginEnd="10dp"
+            android:text="Introduce tus datos de registro" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText"
+            android:layout_alignStart="@+id/editText"
+            android:layout_marginStart="-3dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="10dp"
+            android:ems="10"
+            android:hint="Ingresa tu email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText3"
+            android:layout_alignStart="@+id/editText3"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="10dp"
+            android:ems="10"
+            android:hint="Ingresa tu contraseña"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText4"
+            android:layout_alignStart="@+id/editText4"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="10dp"
+            android:ems="10"
+            android:hint="Confirma tu contraseña"
+            android:inputType="textPassword" />
+
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="@dimen/dimen_novalue"
         android:layout_height="match_parent"
         android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="28dp"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="33dp"
+            android:gravity="center"
+            android:text="Terminos y Condiciones" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView4"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginEnd="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="27dp"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+            </LinearLayout>
+        </ScrollView>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="41dp"
+            android:layout_marginBottom="56dp"
+            android:layout_alignParentStart="true"
+            android:text="Acepto los termino y condiciones" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/checkBox"
+            android:text="Aceptar" />
+
     </RelativeLayout>
 </LinearLayout>
